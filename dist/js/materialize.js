@@ -1233,7 +1233,7 @@ M.escapeHash = function (hash) {
  */
 M.getClosestAncestor = function (el, condition) {
   var ancestor = el.parentNode;
-  while (ancestor !== null && !$(ancestor).is(document)) {
+  while (ancestor !== null && ancestor !== document) {
     if (condition(ancestor)) {
       return ancestor;
     }
